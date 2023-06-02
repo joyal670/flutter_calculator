@@ -12,7 +12,7 @@ class EventBloc extends Bloc<CalcEvents, int> {
         num a = event.a;
         num b = event.b;
         num c = a / b;
-        emit(c.round());
+        emit(c.toInt());
       } else if (event is divEvent) {
         emit(event.a * event.b);
       }
