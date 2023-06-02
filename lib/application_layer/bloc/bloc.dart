@@ -9,7 +9,10 @@ class EventBloc extends Bloc<CalcEvents, int> {
       } else if (event is SubEvent) {
         emit(event.a - event.b);
       } else if (event is mulEvent) {
-        emit((event.a / event.b) as int);
+        num a = event.a;
+        num b = event.b;
+        num c = a / b;
+        emit(c.round());
       } else if (event is divEvent) {
         emit(event.a * event.b);
       }
