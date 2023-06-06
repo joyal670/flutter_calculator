@@ -1,4 +1,5 @@
 import 'package:calculator/application_layer/ui/HomePage.dart';
+import 'package:calculator/application_layer/ui/cubit_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,7 +26,12 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const HomeScreen(),
+
+      // for cubit example
+      home: CounterPage(),
+
+      // for bloc example
+      //home: HomeScreen()
     );
   }
 }
